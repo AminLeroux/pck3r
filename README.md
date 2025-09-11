@@ -1,98 +1,121 @@
-
-
-
-
-# pck3r
+# Pck3r
 
 ![Screenshot](screenshot/pck3r.png)
 
-this program created for novice in linux   and this program, can handle almost things in ubuntu and all distributions  based on  debian(package manager : "apt")...
-this program , create by amzy0(M.Amin azimi.K) this program , can change under GPL3 license ...
-you can send me a pull request in github : https://github.com/amzy-0/pck3r and features will be added to pck3r soon ...
-good luck...
+Pck3r is a user-friendly command-line tool designed for Linux novices. Written in Python, it simplifies package management and system operations on Ubuntu and all Debian-based distributions using the apt package manager.
 
-# logo
+Pck3r is created by Amzyei (Amin Azimi) and is licensed under GPL3. Contributions are welcome—feel free to send pull requests on GitHub: https://github.com/amzy31/pck3r. New features will be added to Pck3r soon!
 
-<pre>
+## Logo
+
+```
   尸⼕长㇌尺
-</pre>
+```
 
-# help and  use
+## Overview
 
-<pre>
------------------------------------------
-|                                       |
-| pck3r : It is a versatile program and |
-|                                       |
-| you avoid using useless commands and  |
-|                                       |
-| it is written for Ubuntu...           |
-|                                       |
------------------------------------------
-</pre>
+Hey Linux friends! Pck3r makes Ubuntu/Debian package management simple and fun. No more complex apt commands - just easy, memorable ones. Perfect for beginners and pros alike!
 
+## Commands
 
+### Install Command
 
-"install" command :
-    
-    $ pck3r install "somthing" :
-    {
-            nodejs,
-            python3pip,
-            java,
-            wine,
-            ohmyzsh,
-            or ...
-    }
+Install packages or tools:
 
-"clear" command :
-    
-    $ pck3r clear:
-    {clear your terminal }
+```bash
+pck3r install <package>
+```
 
-"iso" command : 
-    
-    $ pck3r iso 32/64  "somthing":
-    {
-        mint,
-        fedora,
-        gentoo,
-        or ...
-    }
+Examples:
+- `pck3r install nodejs`
+- `pck3r install ohmyzsh`
+- `pck3r install <any_package>`
 
-"dwn" command :
-    
-    $ pck3r dwn "https/http://somthing"
-    {dwn is downloader for pck3r }
+### Clear Command
 
-"sys" command : 
-    
-    $ pck3r sys update 
-    (update your oprating system)
-    
-    $ pck3r sys upgrade
-    (upgrade your oprating system)
-    
-    $ pck3r updgr
-    (both, update and upgrade (full upgrade))
+Clear your terminal screen:
 
-"term" command :
+```bash
+pck3r clear
+```
 
-    $ pck3r term
-    (command for run, pck3r terminal emulator)
+### System Commands
 
+Manage your operating system:
 
-# install pck3r  global 
+- Update package lists:
+  ```bash
+  pck3r sys update
+  ```
 
+- Upgrade installed packages:
+  ```bash
+  pck3r sys upgrade
+  ```
 
-$ cd install-pck3r-ubuntu/
+- Full upgrade (update and upgrade):
+  ```bash
+  pck3r sys updgr
+  ```
 
-$ ./installer
+### Package Search
 
+Search for available packages:
 
-# update pck3r 
+```bash
+pck3r pkg <package_name>
+```
 
+This uses `apt search` to find packages.
 
-$ cd updator/
+### Version
 
-$ ./updator
+Check Pck3r version:
+
+```bash
+pck3r version
+```
+
+## Installation
+
+To install Pck3r globally:
+
+1. Ensure Python 3 is installed on your system (comes pre-installed on most Linux distributions)
+
+2. Clone the repository:
+   ```bash
+   git clone https://github.com/amzy31/pck3r
+   ```
+
+3. Navigate to the directory:
+   ```bash
+   cd pck3r
+   ```
+
+4. Install globally:
+   ```bash
+   make install
+   ```
+
+Or run directly:
+```bash
+python3 main.py <command>
+```
+
+## Update
+
+To update Pck3r to the latest version:
+
+```bash
+git pull origin master
+```
+
+Then reinstall:
+```bash
+make install
+```
+
+Or use the built-in update command:
+```bash
+pck3r update
+```
