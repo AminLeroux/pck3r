@@ -1,0 +1,6 @@
+- [x] Modify install_ohmyzsh function in lib/install.py to make Oh My Zsh installation non-interactive
+- [x] Test the python3 main.py install ohmyzsh command
+- [x] Fix VLC installation for Ubuntu 24.04
+- [x] Update Wine and VirtualBox URLs for Ubuntu 24.04
+- [x] Optimize install_command with dictionary
+- [x] Update README.md with explicit built-in packages list
