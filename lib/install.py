@@ -1,3 +1,4 @@
+import os
 import subprocess
 from lib.colors import RED, GREEN, YELLOW, RESET
 from lib.utils import sys_err, sys_ok, after_empty
@@ -48,7 +49,7 @@ def install_ohmyzsh():
         # Install Oh My Zsh
         subprocess.run([
             "bash", "-c",
-            "sh -c '$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)'"
+            "curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | bash"
         ], check=True)
         print(sys_ok("Oh My Zsh installed successfully!"))
     except subprocess.CalledProcessError:
