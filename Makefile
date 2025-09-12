@@ -1,19 +1,19 @@
 .PHONY: all build clean install run
 
-BINARY_NAME := pck3r
+EXEC_NAME := pck3r
 
 all: build
 
 build:
-	cp main.py $(BINARY_NAME)
-	chmod +x $(BINARY_NAME)
+	cp main.py $(EXEC_NAME)
+	chmod +x $(EXEC_NAME)
 
 clean:
-	rm -f $(BINARY_NAME)
+	rm -f $(EXEC_NAME)
 
 install: build
 	sudo cp README.md /bin/pck3r-help
-	sudo install -m 755 $(BINARY_NAME) /usr/local/bin/$(BINARY_NAME)
+	sudo install -m 755 $(EXEC_NAME) /usr/local/bin/$(BINARY_NAME)
 
 run:
 	python3 main.py --help
